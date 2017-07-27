@@ -1,0 +1,44 @@
+
+<div>
+<% @top_artists.each do |artist| %>
+   <%= artist.name %>
+   <img src= "<%= artist.images.first['url'] %>" height="70" width="70">
+    </br >
+
+<% end %>
+
+</div>
+
+<div>
+
+<% @top_tracks.each do |track| %>
+   <%= track.name %>
+   <img src= "<%= track.album.images.first['url'] %>" height="70" width="70">
+    </br >
+
+<% end %>
+
+</div>
+
+<div>
+<% @related_artists.each do |related_artist| %>
+	<%= related_artist.name %>
+	<img src = "<%= related_artist.images.first['url'] %>" height="70" width="70">
+	</br>
+<% end %>
+</div>
+
+<div>
+	<% @recommendations.each do |rec| %>
+		<%=rec.name %>
+		<img src= "<%= rec.album.images.first['url'] %>" height="70" width="70">
+		</br>
+
+	<% end %>
+
+</div>
+
+<img src="<%= @image['url'] %>" height="70" width="70">
+<%= @image %>
+
+
