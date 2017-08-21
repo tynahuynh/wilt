@@ -7,8 +7,7 @@ class UsersController < ApplicationController
 		# @tracks = @top_tracks.map { |track| track.name }
 
 		@top_artists = spotify_user.top_artists
-		# @artists = @top_artists.map { |artist| artist.name }
-		# @artists_images = @top_artists.map { |artist| artist.images.first['url'] }
+
 
 		@related_artists = @top_artists.map { |artist| artist.related_artists.first }
 
